@@ -1,0 +1,58 @@
+section 
+	&.three-steps
+		padding: 100px 0
+		text-align: center 
+		background-color: white
+		h2 
+			font-family: $font-title
+			color: $color-primary
+			position: relative 
+			font-size: 35px
+			margin-bottom: 30px
+			&:after 
+				content: ""
+				position: absolute 
+				top: calc( 100%  + 35px)
+				left: 0
+				right: 0
+				margin: 0 auto
+				width: 60px 
+				height: 2px 
+				background-color: $color-primary
+
+		.row.steps-row
+			position: relative
+			&:before  
+				content: ""
+				position: absolute
+				left: 16%
+				right: 16%
+				top: 100px
+				border-top: 1px dashed #b21277
+				opacity: 0.4
+			.single-step 
+				padding: 50px 
+				.step-number 
+					background-color: $color-primary 
+					display: flex 
+					align-items: center 
+					width: 100px 
+					height: 100px 
+					border-radius: 50% 
+					text-align: center
+					justify-content: center 
+					margin: 0 auto 10px
+					overflow: hidden
+
+					span 
+						font-weight: 100
+						color: white 
+						font-size: 70px 
+				p 
+					font-size: 20px
+					margin-top: 20px
+					font-style: italic
+					color: grey
+
+		
+		

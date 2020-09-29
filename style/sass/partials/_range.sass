@@ -1,0 +1,156 @@
+section 
+	&.life-range 
+		padding: 100px 0  
+		.range-title
+			text-align: center 
+			h3 
+				font-size: 32px
+				font-family: $font-title
+				margin-bottom: 20px 
+				color: $color-primary 
+			p 
+				font-size: 20px 
+				margin-bottom: 30px
+				
+
+
+		.range-collection
+			display: flex 
+			// height: 100% 
+			flex-wrap: wrap
+			
+			.single-range-item 
+				border: 1px solid lightgrey
+				padding: 0
+				display: flex
+				flex-wrap: wrap
+				flex-shrink: 0
+				width: 100%
+				min-width: 50%
+				margin-bottom: 20px
+				cursor: pointer
+				.inner-range-item
+					padding: 0
+					position: relative
+					overflow: hidden
+					box-shadow: 1px -1px 6px 3px rgba(0,0,0,0.4)
+					width: 100%
+					border-radius: 5px
+					overflow: hidden
+					&:before 
+						// content: "" 
+						position: absolute 
+						top: 0 
+						left: 0
+						z-index: 0
+						height: 100%
+						width: 100% 
+						// background-image: url('/assets/life-bg.jpg')
+						background-size: cover
+						background-position: center
+						background-repeat: no-repeat
+						transition: ease-in-out 200ms all
+					&:after 
+						// content: "" 
+						z-index: 1
+						position: absolute 
+						top: 0 
+						left: 0 
+						height: 100%
+						width: 100% 
+						// background-color: rgba(0,0,0,0.3)
+					.range-item-content 
+						position: relative
+						height: 100%
+						z-index: 9
+						> div 
+							height: 0
+							overflow: hidden
+							transition: ease-in-out 250ms all
+							.range-item-desc.showing
+								transition: ease-in-out 200ms all
+								transform: translateY(0) 
+								opacity: 1
+								transition-delay: 0.4s
+
+
+
+						p 
+							&.range-item-title 
+								font-size: 29px 
+								color: white 
+								padding: 15px  
+								border-bottom: 1px solid rgba(255,255,255,0.7)
+
+								background: #b20077
+								background: -moz-linear-gradient(45deg, #b20077 33%, #009cdd 100%)
+								background: -webkit-linear-gradient(45deg, #b20077 33%, #009cdd 100%)
+								background: linear-gradient(45deg, #b20077 33%, #009cdd 100%)
+								&:after 
+									content: ""
+									position: absolute 
+									right: 0
+									top: 10px 
+									height: 50px 
+									width: 50px 
+									background-image: url('/assets/icons/arrow.svg')
+									background-size: 50%
+									background-position: center
+									background-repeat: no-repeat
+
+							&.range-item-desc
+								opacity: 0
+								transform: translateY(5px) 
+								line-height: 2
+								padding: 15px
+								color: #333
+								font-size: 18px  
+								transition: ease-in-out 200ms all 
+							.cta 
+								display: block
+								width: auto
+								font-size: 15px
+								max-width: 343px
+								margin: 20px 0 0
+
+						&.display-item-content
+
+
+
+					.readmore 
+						position: absolute 
+						bottom: 15px
+						right: 15px 
+						color: white
+						z-index: 4
+						font-size: 11px
+						letter-spacing: 1px 
+						text-transform: uppercase 
+						transition: ease-in-out 200ms all
+				// &:hover 
+				// 	.inner-range-item
+				// 		.range-item-content 
+				// 			p.range-item-desc 
+				// 				transform: translateY(0)
+				// 				opacity: 1
+				// 				transition: ease-in-out 200ms all 
+
+				// 		&:after
+				// 			background-color: rgba(0,0,0,0.7)
+				// 			transition: ease-in-out 200ms all
+				// 		&:before
+				// 			transform: scale(1.2)
+				// 			transition: ease-in-out 200ms all
+				// 	.readmore 
+				// 		transition: ease-in-out 200ms all 
+				// 		opacity: 0
+					
+						
+
+
+
+					
+
+
+
+
