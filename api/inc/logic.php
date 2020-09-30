@@ -62,9 +62,7 @@ class logic {
         
         return $waypoint_response;  
         die();
-    }
-
-
+    }  
 
     function store_lead($data){
 
@@ -125,9 +123,7 @@ class logic {
             $db = null;
             return false;
         } 
-    }
-
-
+    } 
 
     function send_mail($data, $type){
 
@@ -640,7 +636,6 @@ class logic {
 
         </style>";
         return $style;
-    }
-
+    } 
 
 }
