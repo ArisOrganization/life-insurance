@@ -10,10 +10,7 @@ use PHPMailer\PHPMailer\SMTP;
 require __DIR__ . '/../php_mailer/Exception.php';
 require __DIR__ . '/../php_mailer/PHPMailer.php';
 require __DIR__ . '/../php_mailer/SMTP.php';
-
-
-
-
+ 
 ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
