@@ -75,10 +75,12 @@
             window.location.href = "/comparison-quote";
           });
 
+          // pedro new code
           $(".clickable-new").on("click", function (e) {
             e.preventDefault();
             window.location.href = "/insurance-quote";
           });
+          //-----//
 
           if ($("[data-aos]").length) {
             // var aos = document.createElement('script');
@@ -311,11 +313,14 @@
             console.log("RESPONSE: " + JSON.stringify(response, 2, null));
             if (response.success) {
               // alert("SUCCESS....")
+
+              // Pedro new code
               if (window.location.href.includes("/insurance-quote")) {
                 window.location.href = "/completed";
               } else {
                 window.location.href = "/thankyou";
               }
+              //----//
             } else {
               alert("An error has occurred, please try again.");
             }
