@@ -633,6 +633,5 @@ class logic {
 
         </style>";
         return $style;
-    } 
-
+    }  
 }
