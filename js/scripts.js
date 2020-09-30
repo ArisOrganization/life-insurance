@@ -254,7 +254,9 @@
           if ($(".active-step").hasClass("step-2")) {
             if (
               $(".active-step select option:selected").val() == "empty" ||
-              $("#cover-length").val().length < 1
+              // new code by Pedro
+              $("#cover-length").val() < 1 ||
+              $("#cover-length").val() > 15
             )
               return false;
           } else if ($(".active-step").hasClass("step-3")) {
