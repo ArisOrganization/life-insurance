@@ -10,10 +10,7 @@ use PHPMailer\PHPMailer\SMTP;
 require __DIR__ . '/../php_mailer/Exception.php';
 require __DIR__ . '/../php_mailer/PHPMailer.php';
 require __DIR__ . '/../php_mailer/SMTP.php';
-
-
-
-
+ 
 ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
@@ -62,9 +59,7 @@ class logic {
         
         return $waypoint_response;  
         die();
-    }
-
-
+    }  
 
     function store_lead($data){
 
@@ -125,9 +120,7 @@ class logic {
             $db = null;
             return false;
         } 
-    }
-
-
+    } 
 
     function send_mail($data, $type){
 
@@ -640,7 +633,5 @@ class logic {
 
         </style>";
         return $style;
-    }
-
-
+    }  
 }

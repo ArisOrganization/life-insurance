@@ -156,9 +156,7 @@ function build_package(done) {
     .pipe(gulp.dest("./package/partials"));
  
     gulp.src([ 
-        './thankyou.php', 
-        './comparison-quote.php',
-        './index.php'
+        './*.php'
     ])
     .pipe(gulp.dest("./package"))
   
