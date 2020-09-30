@@ -47,7 +47,20 @@ const api_key =
 </script>
 
 
-<?php if ($_SERVER['REQUEST_URI'] == '/life-insurance-now' || $_SERVER['REQUEST_URI'] == '/completed' || $_SERVER['REQUEST_URI'] == '/insurance-quote' ): ?>
+<?php
+
+  $fb_id = "";
+  if (  $_SERVER['REQUEST_URI'] == '/life-insurance-now'  ||
+        $_SERVER['REQUEST_URI'] == '/completed'           ||
+        $_SERVER['REQUEST_URI'] == '/insurance-quote' ): 
+
+    $fb_id = '656543581934778';
+
+  else:
+    $fb_id = '821076558662102';
+  ?>
+ 
+
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -69,42 +82,13 @@ const api_key =
   s.parentNode.insertBefore(t, s)
 }(window, document, 'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '821076558662102');
+fbq('init', '<?php echo $fb_id; ?>');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=821076558662102&ev=PageView&noscript=1" /></noscript>
+    src="https://www.facebook.com/tr?id=<?php echo $fb_id; ?>&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
-<?php else: ?>
-<!-- Facebook Pixel Code -->
-<script>
-! function(f, b, e, v, n, t, s) {
-  if (f.fbq) return;
-  n = f.fbq = function() {
-    n.callMethod ?
-      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-  };
-  if (!f._fbq) f._fbq = n;
-  n.push = n;
-  n.loaded = !0;
-  n.version = '2.0';
-  n.queue = [];
-  t = b.createElement(e);
-  t.async = !0;
-  t.src = v;
-  s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s)
-}(window, document, 'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '656543581934778');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=656543581934778&ev=PageView&noscript=1" /></noscript>
-<!-- End Facebook Pixel Code -->
-
-<?php endif; ?>
-
+ 
 
 
 
@@ -121,3 +105,4 @@ gtag('js', new Date());
 gtag('config', 'UA-177542530-1');
 gtag('config', 'AW-587056901');
 </script>
+ 
