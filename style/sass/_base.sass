@@ -1,5 +1,5 @@
-html 
-    max-width: 100% 
+html
+    max-width: 100%
     margin: 0
     padding: 0
 body
@@ -8,14 +8,14 @@ body
     font-size: 16px
     color: black
     margin: 0
-    padding: 0 
-    
-    * 
+    padding: 0
+
+    *
         font-family: $font-main
-    
-    section 
+
+    section
         padding-bottom: 30px
-     
+
     label.accessibility-label
         font-size: 0
         color: transparent
@@ -23,35 +23,34 @@ body
         margin: 0
         display: inline
         opacity: 0
-    
-    a.named-tag 
+
+    a.named-tag
         font-size: 0!important
-        color: transparent!important 
+        color: transparent!important
     &.scroll-lock
         overflow: hidden!important
         height: 100vh
     .desktop-content
         display: block
     .tablet-content
-        display: none 
+        display: none
     .mobile-content
-        display: none 
-    * 
+        display: none
+    *
         margin: 0
-        padding: 0 
- 
+        padding: 0
+
     img
         max-width: 100%
-        display: block  
+        display: block
 
-    .cta-container 
-        display: block  
+    .cta-container
+        display: block
         margin-top: 50px
-        text-align: center 
-        width: 100%  
-        
-            
-    .ui-datepicker 
+        text-align: center
+        width: 100%
+
+    .ui-datepicker
         .ui-datepicker-header
             background-color: $color-primary
     .ui-state-highlight
@@ -62,29 +61,27 @@ body
         border: 1px solid $color-primary!important
         background: $color-primary!important
         color: #ffffff!important
-         
-    .ui-widget-header 
+
+    .ui-widget-header
         .ui-state-highlight
             border: 1px solid $color-primary!important
             background: $color-primary!important
             color: #ffffff!important
 
-
-
-    .loader 
-        height: 50px 
-        width: 50px 
+    .loader
+        height: 50px
+        width: 50px
         border-radius: 50%
         border: 9px solid $color-black-shade
         border-top: 9px solid $color-black
-        display: block 
+        display: block
         position: relative
-        margin: 20px auto 
+        margin: 20px auto
         transition: ease-in-out 200ms all
         animation: rotate 1.5s linear infinite
         &.show-loader
-            height: 70px 
-            width: 70px 
+            height: 70px
+            width: 70px
             transition: ease-in-out 200ms all
 
 @keyframes rotate
