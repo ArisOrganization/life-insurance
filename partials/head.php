@@ -22,6 +22,25 @@
 <link rel="preload" as="style" href="/dist/style/custom_style.css">
 <link rel="stylesheet" type="text/css" href="/dist/style/custom_style.css">
 
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s),
+    dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-KBFKN7P');
+</script>
+<!-- End Google Tag Manager -->
+
 <!-- <meta name='robots' content='noindex,nofollow' />  -->
 <script>
 const api_key =
@@ -60,7 +79,7 @@ const api_key =
     $fb_id = '821076558662102';
   endif;
   ?>
- 
+
 
 
 <!-- Facebook Pixel Code -->
@@ -89,7 +108,7 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=<?php echo $fb_id; ?>&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
- 
+
 
 
 
@@ -106,4 +125,3 @@ gtag('js', new Date());
 gtag('config', 'UA-177542530-1');
 gtag('config', 'AW-587056901');
 </script>
- 
