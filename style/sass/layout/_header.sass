@@ -1,36 +1,49 @@
-header 
+header
     background: white
-    padding: 5px 0 
-    position: fixed 
+    padding: 5px 0
+    position: fixed
     top: 0
     left: 0
     right: 0
     z-index: 99999
-    border-bottom: 1px solid lightgrey 
+    border-bottom: 1px solid lightgrey
     box-shadow: 1px 1px 11px 3px rgba(0, 0, 0, 0.4)
-    transition: ease-in-out 200ms all 
+    transition: ease-in-out 200ms all
 
+    .telephone
+        position: relative
+        font-size: 35px
+        color: #b20076
+        font-weight: 500
+        &:before
+            content: ''
+            position: absolute
+            height: 40px
+            width: 40px
+            background: url(/assets/icons/call.svg)
+            background-size: cover
+            left: -20%
 
-    .header-inner 
-        display: flex 
-        align-items: center 
-        flex-direction: row 
+    .header-inner
+        display: flex
+        align-items: center
+        flex-direction: row
         justify-content: space-between
         .customer-review
             cursor: pointer
-            a 
+            a
                 cursor: pointer
                 color: #333
                 text-decoration: none
-                span 
-                    color: #333 
+                span
+                    color: #333
                     transform: translateY(3px)
                     font-size: 11px
                     display: block
-            img 
+            img
                 max-height: 30px
                 cursor: pointer
-        img 
+        img
             transition: ease-in-out 200ms all
-            display: block 
+            display: block
             max-height: 50px
