@@ -1,47 +1,64 @@
 // @media screen and (max-width: 1200px)  
-@media screen and (max-width: 992px) 
-	.quote-box 
+@media screen and (max-width: 992px)
+	header
+		.telephone
+			font-size: 25px
+			&:before
+				width: 35px
+				height: 35px
+
+	.quote-box
 		display: none!important
 	section
-		&.three-steps 
+		&.three-steps
 			.row.steps-row
 				&:before
-					display: none 
-	
-		&.comparisons 
-			.logo-bubbles 
+					display: none
+
+		&.comparisons
+			.logo-bubbles
 				justify-content: center
 				flex-wrap: wrap
-				.single-bubble-logo 
+				.single-bubble-logo
 					flex-shrink: 0
 					flex-wrap: wrap
 					margin: 15px
-		&.life-range 
-			.range-collection 
-				.single-range-item  
+		&.life-range
+			.range-collection
+				.single-range-item
 					width: 50%
 					min-width: 100%
-@media screen and (max-width: 769px) 
+@media screen and (max-width: 769px)
+	header
+		.telephone
+			margin-top: 15px
+			font-size: 20px
+			&:before
+				width: 28px
+				height: 28px
+				left: 50%
+				transform: translateX(-50%)
+				top: -20px
 	.hero-form-container
-		margin-top: 50px!important  
+		margin-top: 50px!important
 		.inner-hero-form-container
 			.form-main-title-container
 				padding: 30px 0 10px!important
-				> p 
+				> p
 					display: none
-				h1 
+				h1
 					font-size: 24px!important
 					margin-bottom: 15px
-			.single-step 
-				&:before, &:after 
+			.single-step
+				&:before, &:after
 					height: 4px
 					top: 28px
 				.inner-single-step
-					> p 
+					> p
 						display: none
 		.inner-step-progress
 			margin: 20px 0 0!important
-							
+
 		.form-step
 			.step-title-container
 				padding: 15px 0 0 !important
@@ -49,88 +66,99 @@
 					// flex-direction: column
 					// justify-content: center 
 					margin-bottom: 10px
-					.step-number 
+					.step-number
 						height: 50px!important
 						width: 50px!important
 						font-size: 31px!important
 						margin-right: 15px!important
-				
-					> p 
+
+					> p
 						font-size: 20px!important
 						margin-top: 7px
 						margin-bottom: 0!important
 				> p:last-of-type
 					font-size: 26px!important
-					padding: 0!important 
-			.step-content 
-				.quote-buttons 
+					padding: 0!important
+			.step-content
+				.quote-buttons
 					display: flex
 					justify-content: space-between
 					flex-direction: column
-					button 
+					button
 						width: 100%!important
 						margin-top: 5px!important
-			
-			.row-fieldsets 
+
+			.row-fieldsets
 				flex-direction: column
-				fieldset 
+				fieldset
 					width: 100%!important
 
-
-
-
 @media screen and (max-width: 580px)
-	header 
+	header
+		.telephone
+			font-size: 20px
+			position: absolute
+			right: 29px
+			top: -4px
+
+			&:before
+				top: 0
+				left: -25%
+				width: 28px
+				height: 28px
+
 		.header-inner
 			.customer-review
+				margin-top: 15px
 				img
-					max-height: 20px 
-	section 
+					max-height: 20px
+	section
 		padding: 40px 0!important
-		&.hero 
+		&.hero
 			padding: 0!important
-			.hero-left 
-				padding: 90px 0 30px;
-				.inner-left-content 
-					.title-container  
+			.hero-left
+				padding: 90px 0 30px
+				.inner-left-content
+					.title-container
 						border-bottom: 1px solid #e7e7e7
 						padding: 0 15px 10px
 						margin-bottom: 10px
 						h1
-    						font-size: 37px!important
+							font-size: 37px!important
 						.hero-tagline
-    						font-size: 21px!important
-					.content-container 
+							font-size: 21px!important
+					.content-container
 						ul
 							padding: 0 0 10px
 							margin-bottom: 10px
 							border-bottom: none
-		&.comparisons 
-			padding: 50px 0 
-			.cta-container 
+		&.comparisons
+			padding: 50px 0
+			.cta-container
 				margin-top: 0
-					
-		&.hero-form-banner 
-			form 
-				.form-step 
-					.inner-form-step 
-						.checkbox-container 
-							label 
-    							font-size: 12px
-		&.life-range 
-			.range-collection 
-				.single-range-item 
-					.inner-range-item 
-						.range-item-content 
+
+		&.hero-form-banner
+			form
+				.form-step
+					.inner-form-step
+						.checkbox-container
+							label
+								font-size: 12px
+		&.life-range
+			.range-collection
+				.single-range-item
+					.inner-range-item
+						.range-item-content
 							p.range-item-title
 								font-size: 19px
 								&:after
 									top: 0
-							p 
-								.cta  
+							p
+								.cta
 									font-size: 12px
 									text-align: center
 
 // @media screen and (max-width: 480px)
+
 // @media screen and (max-width: 375px)
 // @media screen and (max-width: 321px)
