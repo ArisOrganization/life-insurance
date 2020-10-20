@@ -6939,11 +6939,11 @@ header .telephone {
 header .telephone:before {
   content: '';
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: url(/assets/icons/call.svg);
   background-size: cover;
-  left: -25%;
+  left: -20%;
 }
 
 header .header-inner {
@@ -7949,8 +7949,8 @@ section.hero-form-banner form .form-step .inner-form-step .checkbox-container .c
     font-size: 25px;
   }
   header .telephone:before {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
   .quote-box {
     display: none !important;
@@ -8051,13 +8051,13 @@ section.hero-form-banner form .form-step .inner-form-step .checkbox-container .c
     font-size: 20px;
     position: absolute;
     right: 29px;
-    top: -4px;
+    top: -18px;
   }
   header .telephone:before {
     top: 0;
-    left: -25%;
-    width: 28px;
-    height: 28px;
+    top-left: -10%;
+    top-width: 25px;
+    top-height: 25px;
   }
   header .header-inner .customer-review {
     margin-top: 15px;
