@@ -7958,7 +7958,8 @@ section.hero-form-banner form .form-step .inner-form-step .checkbox-container .c
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 50px 0;
+  flex-wrap: wrap;
+  padding: 50px;
 }
 
 #three-boxes .inner_container .box {
@@ -7966,6 +7967,8 @@ section.hero-form-banner form .form-step .inner-form-step .checkbox-container .c
   border: 1px solid #BDBDBD;
   padding: 20px;
   margin: 20px;
+  width: 350px;
+  min-width: 350px;
   border-radius: 10px;
 }
 
