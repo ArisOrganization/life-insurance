@@ -54,6 +54,29 @@
           </div>
         </div>
       </section>
+      <section id='three-boxes'>
+        <div class="inner_container">
+          <div class="box">
+            <p>Why life insurance?</p>
+            <p>Life insurance helps keep life going. Protecting you loved ones financial future. 
+            It can pay off debts, cover college costs or even pay the mortgage. Life insurance even 
+            offers options that can help while you are living.</p>
+          </div>
+          <div class="box">
+            <p>Protect your retirement</p>
+            <p>Life insurance is an important part of financial and retirement planning.
+              In addition to protection, you can supplement your retirement with funds from 
+              your life insurance policy for a comfortable future.</p>
+          </div>
+          <div class="box">
+            <p>What are my choices?</p>
+            <p>There are a variety of flexible options available to meet your needs now and for the future. 
+            Consult with a financial profesional to learn more about various types of policies.</p>
+          </div>
+        </div>
+        <button class='cta clickable'>GET YOUR FREE QUOTE TODAY</button>
+    
+      </section>
       <section class='three-steps'>
         <div class='container'>
           <div class='row'>
