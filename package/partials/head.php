@@ -36,24 +36,7 @@ const api_key =
   "<?php echo (!in_array(trim($_SERVER['REMOTE_ADDR']), ["localhost", "::1", "127.0.0.1"])) ? "K3UB-54SM-JD5E-EX5P" :"PJ7V-B47G-ZWCT-WKY9" ; ?>";
 </script>
 
-<!-- Hotjar Tracking Code for https://here-4-life.co.uk/ -->
-<script>
-(function(h, o, t, j, a, r) {
-  h.hj = h.hj || function() {
-    (h.hj.q = h.hj.q || []).push(arguments)
-  };
-  h._hjSettings = {
-    hjid: 2002335,
-    hjsv: 6
-  };
-  a = o.getElementsByTagName('head')[0];
-  r = o.createElement('script');
-  r.async = 1;
-  r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-  a.appendChild(r);
-})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-</script>
-
+ 
 
 <?php
 
@@ -114,3 +97,14 @@ gtag('js', new Date());
 gtag('config', 'UA-177542530-1');
 gtag('config', 'AW-587056901');
 </script>
+
+
+<script type='text/javascript'>
+window.__lo_site_id = 256445;
+
+	(function() {
+		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+	  })();
+	</script>
