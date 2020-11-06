@@ -13,6 +13,7 @@
     $(document).ready(function () {
       app_init.ready();
     });
+
     const app_init = {
       ready: function ready() {
         app.init();
@@ -28,6 +29,81 @@
         app.general_js.init();
         app.loadscripts.init();
         app.form.init();
+        app.images_div_js.init();
+      },
+      images_div_js: {
+        init:function(){
+          $("#img_1").click(function(){
+            $('#p18').show(300)
+            $('#p30').hide(300)
+            $('#p40').hide(300)
+            $('#p50').hide(300)
+            $('#p60').hide(300)
+
+            $('#w18').hide(300)
+            $('#w30').show(300)
+            $('#w40').show(300)
+            $('#w50').show(300)
+            $('#w60').show(300)
+
+          })
+          $("#img_2").click(function(){
+            $('#p18').hide(300)
+            $('#p30').show(300)
+            $('#p40').hide(300)
+            $('#p50').hide(300)
+            $('#p60').hide(300)
+
+            $('#w18').show(300)
+            $('#w30').hide(300)
+            $('#w40').show(300)
+            $('#w50').show(300)
+            $('#w60').show(300)
+
+          })
+          $("#img_3").click(function(){
+            $('#p18').hide(300)
+            $('#p30').hide(300)
+            $('#p40').show(300)
+            $('#p50').hide(300)
+            $('#p60').hide(300)
+
+            $('#w18').show(300)
+            $('#w30').show(300)
+            $('#w40').hide(300)
+            $('#w50').show(300)
+            $('#w60').show(300)
+
+          })
+          $("#img_4").click(function(){
+            $('#p18').hide(300)
+            $('#p30').hide(300)
+            $('#p40').hide(300)
+            $('#p50').show(300)
+            $('#p60').hide(300)
+
+            $('#w18').show(300)
+            $('#w30').show(300)
+            $('#w40').show(300)
+            $('#w50').hide(300)
+            $('#w60').show(300)
+
+          })
+          $("#img_5").click(function(){
+            $('#p18').hide(300)
+            $('#p30').hide(300)
+            $('#p40').hide(300)
+            $('#p50').hide(300)
+            $('#p60').show(300)
+
+            $('#w18').show(300)
+            $('#w30').show(300)
+            $('#w40').show(300)
+            $('#w50').show(300)
+            $('#w60').hide(300)
+
+          })
+        }
       },
       general_js: {
         init: function init() {
