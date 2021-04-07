@@ -38,10 +38,10 @@
                   </div>
                   <div class="content-container">
                     <ul>
-                      <li> We compare all the top UK insurance companies</li>
-                      <li> Guaranteed discounted rates</li>
-                      <li> UK Call centre</li>
-                      <li> Cheaper than going direct to the Insurer</li>
+                      <li> We offer a wide range of insurers to choose from</li>
+                      <li> Our highly trained advisers can tailor make the policy to your needs</li>
+                      <li> We offer additional benefits not provided by the insurers directly</li>
+                      <li> UK Call Centre</li>
                     </ul>
                     <button class="clickable">GET MY QUOTE</button>
                     <p class="form-disclaimer">* premium driven quotation based on a 30 year old male, none smoker level
@@ -58,24 +58,18 @@
         <div class="inner_container">
           <div class="box">
             <p>Why life insurance?</p>
-            <p>Life insurance helps keep life going. Protecting you loved ones financial future. 
-            It can pay off debts, cover college costs or even pay the mortgage. Life insurance even 
+            <p>Life insurance helps keep life going. Protecting your loved ones' financial future.
+            It can pay off debts, cover college costs or even pay the mortgage. Life insurance even
             offers options that can help while you are living.</p>
           </div>
           <div class="box">
-            <p>Protect your retirement</p>
-            <p>Life insurance is an important part of financial and retirement planning.
-              In addition to protection, you can supplement your retirement with funds from 
-              your life insurance policy for a comfortable future.</p>
-          </div>
-          <div class="box">
             <p>What are my choices?</p>
-            <p>There are a variety of flexible options available to meet your needs now and for the future. 
+            <p>There are a variety of flexible options available to meet your needs now and for the future.
             Consult with a financial profesional to learn more about various types of policies.</p>
           </div>
         </div>
         <button class='cta clickable'>GET YOUR FREE QUOTE TODAY</button>
-    
+
       </section>
       <section class='three-steps'>
         <div class='container'>
@@ -127,7 +121,7 @@
           <div class='row'>
             <div class='col-12'>
               <div class="comparison-title">
-                <h3>Comparing against loads insurers to get you the best deal</h3>
+                <h3>Comparing a wide range of insurers to get you the best cover</h3>
               </div>
             </div>
 
@@ -197,7 +191,7 @@
                 <div class="single-range-item">
                   <div class="inner-range-item">
                     <div class="range-item-content">
-                      <p class="range-item-title">Term Insurance</p>
+                      <p class="range-item-title">Level Term</p>
                       <div>
                         <p class="range-item-desc">
                           A fully medically underwritten policy which pays out a fixed sum, assured after a
@@ -214,7 +208,7 @@
                 <div class="single-range-item">
                   <div class="inner-range-item">
                     <div class="range-item-content">
-                      <p class="range-item-title">Decreasing term insurance</p>
+                      <p class="range-item-title">Decreasing Term</p>
                       <div>
                         <p class="range-item-desc">
                           A fully medically underwritten policy in which the total sum assured decreases, often in line
@@ -248,23 +242,7 @@
                 <div class="single-range-item">
                   <div class="inner-range-item">
                     <div class="range-item-content">
-                      <p class="range-item-title">Level Term or term insurance</p>
-                      <div>
-                        <p class="range-item-desc">
-                          Insurance at its most basic, pays out a fixed amount if you die within a fixed ‘term’. If you
-                          die after the pre-agreed term you will not receive a pay-out. For this reason term policies
-                          tend to have lower premiums than those where the client is covered for life.
-                          <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="single-range-item">
-                  <div class="inner-range-item">
-                    <div class="range-item-content">
-                      <p class="range-item-title">Critical illness</p>
+                      <p class="range-item-title">Critical Illness</p>
                       <div>
                         <p class="range-item-desc">
                           Critical illness cover pays a tax free lump sum if you are diagnosed with a defined critical
@@ -277,7 +255,35 @@
                   </div>
                 </div>
 
-                <!-- <div class="single-range-item quote-box">  
+                <div class="single-range-item">
+                  <div class="inner-range-item">
+                    <div class="range-item-content">
+                      <p class="range-item-title">Income Protection</p>
+                      <div>
+                        <p class="range-item-desc">
+                          Income Protection pays you an income if you become ill or injured and, as a result, are unable to work. You decide the amount of income, or benefit, you wish the plan to pay and for how long it's paid for - the Term.
+                          <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="single-range-item">
+                  <div class="inner-range-item">
+                    <div class="range-item-content">
+                      <p class="range-item-title">Over 50's</p>
+                      <div>
+                        <p class="range-item-desc">
+                          Tailor made insurance for people over the age of 50 with medical conditions or who have had problems getting life insurance in the past. Guaranteed acceptance and no medical required.
+                          <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="single-range-item quote-box">
                                         <div class="inner-range-item">
                                             <div class="range-item-content">
                                                 <p class="range-item-title">Get Your Quote</p>
