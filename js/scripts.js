@@ -112,13 +112,11 @@
 
             console.log("CLICKEC");
             let range_item = $(this).find(".range-item-content");
+            range_item.find("> div").addClass('h-100');
 
-            if (range_item.find("> div").height() == 0) {
-              let h = range_item.find(".range-item-desc").height() + 40;
-              range_item.find("> div").css("height", h + "px");
+            if (range_item.find('p.range-item-desc').length !== 0) {
               range_item.find(".range-item-desc").addClass("showing");
             } else {
-              range_item.find("> div").css("height", 0);
               range_item.find(".range-item-desc").removeClass("showing");
             }
           });
