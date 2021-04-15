@@ -8,7 +8,7 @@ const env = (typeof process.env.NODE_ENV == "undefined" ? "development" : proces
 const gulp = require('gulp');
 const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
-const sass = require("gulp-sass"); 
+const sass = require("gulp-sass");
 var archiver = require('gulp-archiver');
 const gulpif = require("gulp-if");
 const concat = require('gulp-concat');
@@ -31,14 +31,14 @@ function clean() {
 
 function copy_assets(done) {
 
-    gulp.src([ 
+    gulp.src([
         './assets/*',
         // './video/*',
         './assets/*/*',
-        './assets/*/*/*', 
+        './assets/*/*/*',
     ])
-    // .pipe(gulp.dest("./dist/assets/")); 
-    .pipe( gulp.dest("./dist/assets") ) // Dev normal CSS 
+    // .pipe(gulp.dest("./dist/assets/"));
+    .pipe( gulp.dest("./dist/assets") ) // Dev normal CSS
     .pipe(gulpif( env ==='package' ,  gulp.dest("./package/dist/assets") ))
 
     done();
@@ -48,16 +48,17 @@ function copy_assets(done) {
 function js(done) {
     console.log("JS + " + env)
     gulp.src([
-        'node_modules/jquery/dist/jquery.min.js', 
-        'node_modules/jquery-validation/dist/jquery.validate.min.js', 
-        'node_modules/aos/dist/aos.js', 
-        // 'node_modules/jquery-ui-dist/jquery-ui.min.js', 
-        // 'node_modules/moment/min/moment.min.js', 
-        // 'node_modules/slick-carousel/slick/slick.min.js', 
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery-validation/dist/jquery.validate.min.js',
+        'node_modules/aos/dist/aos.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+        // 'node_modules/jquery-ui-dist/jquery-ui.min.js',
+        // 'node_modules/moment/min/moment.min.js',
+        // 'node_modules/slick-carousel/slick/slick.min.js',
         "node_modules/rellax/rellax.min.js",
         './js/*/*.js',
         './js/*.js'
-    ]) 
+    ])
         .pipe(
             gulpif(
                 env ==='development', sourcemaps.init()
@@ -66,19 +67,19 @@ function js(done) {
         .pipe(plumber()) //ignore js errors
         .pipe(strip()) // remove comments
         .pipe(concat("main.js")) // append to one main fill
-        .pipe( 
-            gulpif(
-                env ==='production' || env ==='package' , 
-                terser({mangle: true, compress: true}), 
-                terser({mangle: false, compress: false}) 
-            ) 
-        ) 
         .pipe(
             gulpif(
-                env ==='development', sourcemaps.write('.')    
+                env ==='production' || env ==='package' ,
+                terser({mangle: true, compress: true}),
+                terser({mangle: false, compress: false})
             )
         )
-        .pipe( gulp.dest("./dist/js") ) // Dev normal CSS 
+        .pipe(
+            gulpif(
+                env ==='development', sourcemaps.write('.')
+            )
+        )
+        .pipe( gulp.dest("./dist/js") ) // Dev normal CSS
         .pipe(gulpif( env ==='package' ,  gulp.dest("./package/dist/js") ))
     done();
 }
@@ -86,13 +87,13 @@ function js(done) {
 // Compile SASS + CSS files
 function css(done) {
     gulp
-        .src([  
+        .src([
             "./style/css/*.css",
             "node_modules/bootstrap/dist/css/bootstrap-grid.css",
             "node_modules/jquery-ui-dist/jquery-ui.min.css",
-            'node_modules/aos/dist/aos.css', 
+            'node_modules/aos/dist/aos.css',
             // "node_modules/slick-carousel/slick/slick.css",
-            "./style/sass/style.sass" 
+            "./style/sass/style.sass"
         ])
         .pipe(
             gulpif(
@@ -102,16 +103,16 @@ function css(done) {
         .pipe(plumber())
         .pipe(sass({ outputStyle: "expanded" }))
         .pipe(concat("custom_style.css")) // append to one main file
-        .pipe(gulpif(env ==='production' || env ==='package' , 
+        .pipe(gulpif(env ==='production' || env ==='package' ,
             postcss(
-                [ 
+                [
                     cssnano(
                         {
                             comments: {removeAll: true}
-                        } 
+                        }
                     ),
-                    autoprefixer()  
-                ]) 
+                    autoprefixer()
+                ])
             )
         )
         .pipe(gulpif(env ==='production' || env ==='package' , cleanCSS({level: {1: {specialComments: false}}})))
@@ -136,41 +137,41 @@ function watchFiles(cb) {
 
 
 function build_package(done) {
- 
-    gulp.src([ 
+
+    gulp.src([
         './docs/**'
     ])
     .pipe(gulp.dest("./package/docs"));
-    
-    gulp.src([ 
+
+    gulp.src([
         './api/**'
     ])
     .pipe(gulp.dest("./package/api"));
- 
+
 
     gulp.src(['./assets/**']).pipe(gulp.dest("./package/assets"));
- 
-    gulp.src([ 
+
+    gulp.src([
         './partials/**'
     ])
     .pipe(gulp.dest("./package/partials"));
- 
-    gulp.src([ 
+
+    gulp.src([
         './*.php'
     ])
     .pipe(gulp.dest("./package"))
-  
+
     done();
 }
 
 
 
-function zip_package(done) { 
-    gulp.src([ 
+function zip_package(done) {
+    gulp.src([
         './package/**'
     ])
-    .pipe(archiver('package.zip')) 
-    .pipe(gulp.dest('./'));; 
+    .pipe(archiver('package.zip'))
+    .pipe(gulp.dest('./'));;
     done();
 }
 
