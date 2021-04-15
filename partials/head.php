@@ -41,9 +41,9 @@ const api_key =
 <?php
 
   $fb_id = "";
-  if (  $_SERVER['REQUEST_URI'] == '/life-insurance-now'  ||
+  if ($_SERVER['REQUEST_URI'] == '/life-insurance-now'  ||
         $_SERVER['REQUEST_URI'] == '/completed'           ||
-        $_SERVER['REQUEST_URI'] == '/insurance-quote' ): 
+        $_SERVER['REQUEST_URI'] == '/insurance-quote'):
 
     $fb_id = '656543581934778';
 

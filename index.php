@@ -34,7 +34,7 @@
                 <div class="inner-left-content">
                   <div class="title-container">
                     <h1>Life Insurance</h1>
-                    <p class="hero-tagline">From just £7* per month</p>
+                    <p class="hero-tagline">Why choose Here 4 Life</p>
                   </div>
                   <div class="content-container">
                     <ul>
@@ -44,8 +44,7 @@
                       <li> UK Call Centre</li>
                     </ul>
                     <button class="clickable">GET MY QUOTE</button>
-                    <p class="form-disclaimer">* premium driven quotation based on a 30 year old male, none smoker level
-                      term cover, £7 per month over 25 years would get £125,000.</p>
+
                   </div>
                 </div>
 
@@ -103,7 +102,7 @@
                 <div class="step-number">
                   <span>3</span>
                 </div>
-                <p>Secure the guaranteed price you’ll pay. Cheaper than going directly to the insurer!</p>
+                <p>Secure the guaranteed price you’ll pay.</p>
               </div>
             </div>
 
@@ -194,12 +193,20 @@
                       <p class="range-item-title">Level Term</p>
                       <div>
                         <p class="range-item-desc">
-                          A fully medically underwritten policy which pays out a fixed sum, assured after a
-                          pre-determined term. This can be a good choice for those who are intent on a budget-friendly
-                          choice which covers them in the event of death during the fixed term.
+                          Level Term life insurance covers you for a specified amount of time – or the term of the policy. You can choose the length of time you want, whether it be 1 year or 50 years.
+                        </p>
+                        <p class="range-item-desc">
+                          With Level Term cover, the value of your policy and the premium will never change so the lump sum payment can help your family cover funeral expenses, Mortgage, Rent and maintain their standard of living.
+                        </p>
+                        <p class="range-item-desc">
+                          However, it’s worth bearing in mind that because your payments stay the same, the fixed cover won’t increase as the cost of living rises.
+                        </p>
+                        <p class="range-item-desc">
+                          If you’d like your cover to take inflation into account, you can opt for this as part of your level cover policy. Your cover amount will rise with inflation, and your monthly payments can therefore go up.
+                        </p>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
-
                       </div>
                     </div>
                   </div>
@@ -211,10 +218,12 @@
                       <p class="range-item-title">Decreasing Term</p>
                       <div>
                         <p class="range-item-desc">
-                          A fully medically underwritten policy in which the total sum assured decreases, often in line
-                          with your mortgage, but the monthly premium remains the same. This makes it ideal for mortgage
-                          protection, helping to safeguard what is the biggest investment many of us will make - our
-                          home - at an inexpensive rate.
+                          Decreasing Term life insurance covers you for a specified amount of time – or the term of the policy. You can choose the length of time you want, whether it be 1 year or 50 years. This policy is usually taken to cover a repayment mortgage or long term loan if you pass away during the term.
+                        </p>
+                        <p class="range-item-desc">
+                          With decreasing cover, the value of your policy gradually reduces over the policy term until it reaches £0 – however, your premiums never change.
+                        </p>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
                       </div>
@@ -228,10 +237,9 @@
                       <p class="range-item-title">Whole of life</p>
                       <div>
                         <p class="range-item-desc">
-                          A fully medically underwritten policy which pays out a fixed sum, assured when someone dies,
-                          offering cover for life. These policies never go down in value or expire, thanks to level
-                          premiums. Our whole of life insurance offers the holder complete certainty and the peace of
-                          mind which comes with it.
+                          Whole of life insurance covers you indefinitely until you pass away, offering you the peace of mind that funeral expenses and inheritance are taken care of.
+                        </p>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
                       </div>
@@ -245,9 +253,9 @@
                       <p class="range-item-title">Critical Illness</p>
                       <div>
                         <p class="range-item-desc">
-                          Critical illness cover pays a tax free lump sum if you are diagnosed with a defined critical
-                          illness during the policy term. Critical illness is often available as a combined policy with
-                          life insurance, however in these instances you can often only claim once.
+                          Critical Illness insurance is a policy that helps protect you if you become critically ill during the policy term. It pays out a tax-free lump sum that you can use however you like – whether that’s to help cover health-related costs, monthly expenses, or lost income while you get better.
+                        </p>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
                       </div>
@@ -261,7 +269,14 @@
                       <p class="range-item-title">Income Protection</p>
                       <div>
                         <p class="range-item-desc">
-                          Income Protection pays you an income if you become ill or injured and, as a result, are unable to work. You decide the amount of income, or benefit, you wish the plan to pay and for how long it's paid for - the Term.
+                          Income Protection Insurance covers most illnesses and injuries that stop you working either in the short or long term – however, it doesn’t pay out if you’re made redundant. Here’s how policies usually work:
+                        </p>
+                        <ul>
+                          <li>It replaces part of your income if you become ill or injured and can’t work</li>
+                          <li> Income protection covers you until your return to work or until retirement, death or your policy ends or until the limited claim period on your policy ends - whichever is sooner</li>
+                          <li>You can claim as many times as you need to - while the policy lasts</li>
+                        </ul>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
                       </div>
@@ -275,7 +290,9 @@
                       <p class="range-item-title">Over 50's</p>
                       <div>
                         <p class="range-item-desc">
-                          Tailor made insurance for people over the age of 50 with medical conditions or who have had problems getting life insurance in the past. Guaranteed acceptance and no medical required.
+                          Insurance for people age 50 and over. This cover offers guaranteed acceptance and requires no medical application, perfect if you have been medically rejected for life insurance previously. This cover is typically taken to cover funeral expenses.
+                        </p>
+                        <p class="range-item-desc">
                           <a class="cta cta-primary clickable">Get Your FREE Insurance Quote Now</a>
                         </p>
                       </div>
