@@ -29,7 +29,7 @@
               <div class="hero-form-container">
                 <div class="inner-hero-form-container">
                   <div class="form-main-title-container">
-                    <h1>Get the right cover for you from just £7 a month.</h1>
+
                     <div class="step-progress">
                       <div class="inner-step-progress">
                         <div class="single-step completed-step">
@@ -102,6 +102,7 @@
                               <label>HOW MUCH COVER WOULD YOU LIKE?</label>
                               <select class="cover-length">
                                 <option value="empty">Please Select</option>
+                                <option value="0-50">Under 50k</option>
                                 <option value="50-100">50k - 100k</option>
                                 <option value="income">100k - 150k</option>
                                 <option value="mortgage">150k - 200k</option>
@@ -115,7 +116,14 @@
                             </fieldset>
                             <fieldset>
                               <label>COVER LENGTH? (YEARS)*</label>
-                              <input type="number" min="1" max="15" name="cover-length" id="cover-length" />
+
+                              <select name="cover-length">
+                                <option value="empty">Please select</option>
+                                <?php for ($i=1; $i < 51; $i++) { ?>
+                                  <option value="<?= $i ?>"><?= $i ?> Years</option>
+                                <?php } ?>
+                                <option value="life">Whole of Life</option>
+                              </select>
                             </fieldset>
                           </div>
                           <button class="form-next">Next</button>
@@ -407,7 +415,30 @@
                                   href="/docs/life-terms.pdf">terms and conditions</a>.</label>
                             </div>
                           </div>
-                          <button class="form-submit">Get A Quote</button>
+                          <button type="button" data-toggle="modal" data-target="#consentModal">Get My Quote</button>
+
+                          <div class="modal fade" id="consentModal" tabindex="-1" role="dialog" aria-labelledby="consentModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="consentModalLabel">Opt-in</h5>
+                                  <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </div>
+                                </div>
+                                <div class="modal-body">
+                                  <p>
+                                    A protection specialist will need to contact you to discuss your policy options, do you consent to this call?
+                                  </p>
+                                </div>
+                                <div class="modal-footer">
+                                  <div type="button" class="btn btn-success btn-lg form-submit px-5" vale="Submit">Yes</div>
+                                  <div type="button" class="btn btn-danger btn-lg px-5" data-dismiss="modal">No</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -421,6 +452,12 @@
       </section>
     </div>
   </main>
+
+
+
+
+
+
   <!-- footer -->
   <?php include "partials/footer.php" ?>
   <!-- /footer -->
