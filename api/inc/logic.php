@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\SMTP;
 require __DIR__ . '/../php_mailer/Exception.php';
 require __DIR__ . '/../php_mailer/PHPMailer.php';
 require __DIR__ . '/../php_mailer/SMTP.php';
- 
+
 ini_set('error_reporting', E_ALL); // or error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
@@ -35,7 +35,7 @@ class logic {
         json_decode($args);
         return (json_last_error()===JSON_ERROR_NONE);
     }
- 
+
     function write_to_waypoint($data){
 
         $param_string = "";
@@ -47,19 +47,19 @@ class logic {
             // }
             $param_string = $param_string . "&".$param ."=". $value;
         }
- 
-        $ch = curl_init();  
-        $url = "https://opop.waypointsoftware.io/capture.php?xAuthentication=9f37495ae5b8ba588c4ef2766f91d32a" . $param_string; 
-        curl_setopt($ch, CURLOPT_URL, $url);  
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+        $ch = curl_init();
+        $url = "https://opop.waypointsoftware.io/capture.php?xAuthentication=9f37495ae5b8ba588c4ef2766f91d32a" . $param_string;
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 		// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $waypoint_response = curl_exec($ch);
-        curl_close($ch);  
-        
-        return $waypoint_response;  
+        curl_close($ch);
+
+        return $waypoint_response;
         die();
-    }  
+    }
 
     function store_lead($data){
 
@@ -69,161 +69,160 @@ class logic {
 
         $db = new db;
         $stmt = $db->db->prepare("INSERT INTO  leads (
-                                                        name_1, 
-                                                        name_2, 
-                                                        dob_1, 
-                                                        dob_2, 
-                                                        email, 
-                                                        telephone,  
-                                                        cover_group, 
-                                                        cover_value, 
-                                                        cover_length,  
-                                                        readable_date, 
-                                                        unix_date, 
-                                                        ip  
+                                                        name_1,
+                                                        name_2,
+                                                        dob_1,
+                                                        dob_2,
+                                                        email,
+                                                        telephone,
+                                                        cover_group,
+                                                        cover_value,
+                                                        cover_length,
+                                                        readable_date,
+                                                        unix_date,
+                                                        ip
                                                     )VALUES(
-                                                        :name_1, 
-                                                        :name_2, 
-                                                        :dob_1, 
-                                                        :dob_2, 
-                                                        :email, 
-                                                        :telephone,  
-                                                        :cover_group, 
-                                                        :cover_length, 
-                                                        :cover_value,  
-                                                        :readable_date, 
-                                                        :unix_date, 
-                                                        :ip  
+                                                        :name_1,
+                                                        :name_2,
+                                                        :dob_1,
+                                                        :dob_2,
+                                                        :email,
+                                                        :telephone,
+                                                        :cover_group,
+                                                        :cover_length,
+                                                        :cover_value,
+                                                        :readable_date,
+                                                        :unix_date,
+                                                        :ip
                                                     )");
         $stmt->bindValue(":name_1", $data->name_1);
         $stmt->bindValue(":dob_1", $data->dob_1);
         $stmt->bindValue(":name_2", $data->name_2);
         $stmt->bindValue(":dob_2", $data->dob_2);
 
-        $stmt->bindValue(":email", $data->email); 
-        $stmt->bindValue(":telephone", $data->telephone);   
+        $stmt->bindValue(":email", $data->email);
+        $stmt->bindValue(":telephone", $data->telephone);
 
-        $stmt->bindValue(":cover_group", $data->cover_group);   
-        $stmt->bindValue(":cover_length", $data->cover_length);   
-        $stmt->bindValue(":cover_value", $data->cover_value);  
+        $stmt->bindValue(":cover_group", $data->cover_group);
+        $stmt->bindValue(":cover_length", $data->cover_length);
+        $stmt->bindValue(":cover_value", $data->cover_value);
 
-        $stmt->bindValue(":readable_date", $date);  
-        $stmt->bindValue(":unix_date", $unix_date);  
-        $stmt->bindValue(":ip", $ip);  
-         
+        $stmt->bindValue(":readable_date", $date);
+        $stmt->bindValue(":unix_date", $unix_date);
+        $stmt->bindValue(":ip", $ip);
+
         $checkResult = $stmt->execute();
         $lastid = $db->getLast();
-        if($checkResult){  
+        if($checkResult){
             $db = null;
             return $lastid ;
-        }else{            
+        }else{
             $db = null;
             return false;
-        } 
-    } 
+        }
+    }
 
     function send_mail($data, $type){
 
 
 
         $fromEmail =    'no_reply@here-4-life.co.uk';
-        $from =         'Here4Life Team'; 
+        $from =         'Here4Life Team';
 
         $message =  "";
         if($type == "lead"){
-            $subject = "New Here4life quote enquiry"; 
-            $message =     "New Quote Request: " .  
-                            "<br />".  
+            $subject = "New Here4life quote enquiry";
+            $message =     "New Quote Request: " .
                             "<br />".
-                            "Name 1: " .$data->name_1 . 
-                            "<br />".  
+                            "<br />".
+                            "Name 1: " .$data->name_1 .
+                            "<br />".
                             "<br />".
                             "D.O.B. 1: " .$data->dob_1 .
 
-                            "<br />".  
                             "<br />".
-                            "Name 2: " .$data->name_2 . 
-                            "<br />".  
+                            "<br />".
+                            "Name 2: " .$data->name_2 .
+                            "<br />".
                             "<br />".
                             "D.O.B. 2: " .$data->dob_2 .
 
-                            "<br />".  
                             "<br />".
-                            "Cover group: " .$data->cover_group . 
-                            "<br />".  
+                            "<br />".
+                            "Cover group: " .$data->cover_group .
+                            "<br />".
                             "<br />".
                             "Cover value: " .$data->cover_value .
-                            "<br />".  
                             "<br />".
-                            "Cover length: " .$data->cover_length . 
-                            "<br />".  
+                            "<br />".
+                            "Cover length: " .$data->cover_length .
+                            "<br />".
                             "<br />".
                             "Email: " .$data->email.
-                            "<br />".  
+                            "<br />".
                             "<br />".
                             "Telephone: " .$data->telephone;
 
-            $sendToEmail = 'jake.quinn@here4life.co.uk';
-            $ccEmail_a =  'grant@here4life.co.uk';
-            $ccEmail_b =  'scott@claims2gain.com';
- 
+            $sendToEmail = 'grant@here4life.co.uk';
+            $ccEmail =  'scott@claims2gain.com';
+
             // $sendToEmail = 'jay.exton@live.co.uk';
             // $ccEmail_a =  'james@opopmedia.co.uk';
             // $ccEmail_b =  'info@opopmedia.co.uk';
             $sendTo = "Here4Life";
 
-            $recipients = array( $sendToEmail, $ccEmail_a, $ccEmail_b);
+            $recipients = array( $sendToEmail, $ccEmail);
 
 
 
         }else{
             $subject = "Thank you for your recent Here4Life insurance quote enquiry";
             $message =  "Dear " . $data->name_1  . ",".
-                        "<br />".  
+                        "<br />".
                         "<br />".
                         "Thank you for your enquiry, our team at Here4Life will be in touch as soon as possible to discuss your requirements. " .
-                        
-                        "<br />".  
+
                         "<br />".
-                        "Kind Regards" . 
+                        "<br />".
+                        "Kind Regards" .
                         "<br />".
                         "Here4Life Team";
 
 
             $sendTo =       $data->name_1;
-            $sendToEmail =  $data->email; 
+            $sendToEmail =  $data->email;
 
 
             $recipients = array( $sendToEmail);
- 
+
         }
 
 
 
         $params = array(
             'from'	=> $from . ' <'. $fromEmail .'>',
-            'to'	=> $recipients,  
-             //$sendTo .' <'.  $sendToEmail .'>', 
+            'to'	=> $recipients,
+             //$sendTo .' <'.  $sendToEmail .'>',
             // 'to'	=> $sendTo .' <james@opopmedia.co.uk>',
             'subject' => $subject,
             'text' => $message,
-            'html' => $message 
+            'html' => $message
         );
-  
+
         # Instantiate the client.
         $mgClient = Mailgun::create('key-457dfdf53592c8b42f1b655ae184aaa8', 'https://api.eu.mailgun.net/v3');
         $domain = "mailer.here-4-life.co.uk";
-        
 
-        # Make the call to the client. 
-        $res = $mgClient->messages()->send($domain, $params);  
-        if($res->getMessage() == "Queued. Thank you."){ 
+
+        # Make the call to the client.
+        $res = $mgClient->messages()->send($domain, $params);
+        if($res->getMessage() == "Queued. Thank you."){
             return  array('success' => true, 'message' =>  "Message Sent");
         }else{
             return array('type' => 'false', 'message' =>  "Message error");
         }
 
- 
+
     }
 
     function send_smtp_mail($email, $msg){
@@ -633,5 +632,5 @@ class logic {
 
         </style>";
         return $style;
-    }  
+    }
 }
