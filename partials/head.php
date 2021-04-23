@@ -22,13 +22,26 @@
 <link rel="preload" as="style" href="/dist/style/custom_style.css">
 <link rel="stylesheet" type="text/css" href="/dist/style/custom_style.css">
 
+<!-- Google Tag Manager (OLD) -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KBFKN7P');</script> -->
+<!-- End Google Tag Manager (OLD) -->
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KBFKN7P');</script>
+})(window,document,'script','dataLayer','GTM-N2Z82K2');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2Z82K2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- <meta name='robots' content='noindex,nofollow' />  -->
 <script>
@@ -36,7 +49,7 @@ const api_key =
   "<?php echo (!in_array(trim($_SERVER['REMOTE_ADDR']), ["localhost", "::1", "127.0.0.1"])) ? "K3UB-54SM-JD5E-EX5P" :"PJ7V-B47G-ZWCT-WKY9" ; ?>";
 </script>
 
- 
+
 
 <?php
 
