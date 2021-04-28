@@ -49,54 +49,29 @@ const api_key =
   "<?php echo (!in_array(trim($_SERVER['REMOTE_ADDR']), ["localhost", "::1", "127.0.0.1"])) ? "K3UB-54SM-JD5E-EX5P" :"PJ7V-B47G-ZWCT-WKY9" ; ?>";
 </script>
 
-
-
 <?php
+  $fbq_id = '306273427757242';
+  $fbq_lead = "fbq('track', 'Lead');";
+?>
 
-  $fb_id = "";
-  if ($_SERVER['REQUEST_URI'] == '/life-insurance-now'  ||
-        $_SERVER['REQUEST_URI'] == '/completed'           ||
-        $_SERVER['REQUEST_URI'] == '/insurance-quote'):
-
-    $fb_id = '656543581934778';
-
-  else:
-    $fb_id = '821076558662102';
-  endif;
-  ?>
-
-
-
-<!-- Facebook Pixel Code -->
-<script>
-! function(f, b, e, v, n, t, s) {
-  if (f.fbq) return;
-  n = f.fbq = function() {
-    n.callMethod ?
-      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-  };
-  if (!f._fbq) f._fbq = n;
-  n.push = n;
-  n.loaded = !0;
-  n.version = '2.0';
-  n.queue = [];
-  t = b.createElement(e);
-  t.async = !0;
-  t.src = v;
-  s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s)
-}(window, document, 'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '<?php echo $fb_id; ?>');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=<?php echo $fb_id; ?>&ev=PageView&noscript=1" /></noscript>
-<!-- End Facebook Pixel Code -->
-
-
-
-
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?= $fbq_id ?>');
+    fbq('track', 'PageView');
+    <?php $_SERVER['REQUEST_URI'] == '/completed' ? $fbq_lead : ''; ?>
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=306273427757242&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177542530-1"></script>
