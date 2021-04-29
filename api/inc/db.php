@@ -12,7 +12,7 @@ class db {
 
 	public function connect() {
 		try {
-			$this->db = new PDO ("mysql:host=localhost;dbname=life", "root",""); 
+			$this->db = new PDO ("mysql:host=localhost;dbname=life", "life","@p455w0rd1!"); 
 			$this->db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch (PDOException $e) {
 			print( "Error connecting to SQL Server." );
