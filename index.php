@@ -58,8 +58,9 @@
     <section class='hero-form-banner'>
       <div class='container'>
         <div class='row'>
-          <div class='col-12'>
-            <div class="hero-form-container">
+          <div class='col-12 pt-5'>
+            <h1 class="form-title text-center py-5">Get your quote in 4 easy steps</h1>
+            <div class="hero-form-container mt-0">
               <div class="inner-hero-form-container">
                 <div class="form-main-title-container">
 
@@ -454,8 +455,7 @@
                             <label for="call-check">By clicking this box you agree to a protection specialist calling you to discuss your policy options.</label>
                           </div>
                         </div>
-                        <button type="button" data-toggle="modal" data-target="#consentModal">Get My Quote</button>
-
+                        <button type="button" class="form-submit">Get My Quote</button>
                       </div>
                     </div>
                   </div>
@@ -467,14 +467,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
 
       <section id='three-boxes'>
         <div class="inner_container">

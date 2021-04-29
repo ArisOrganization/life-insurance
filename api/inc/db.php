@@ -3,23 +3,23 @@ namespace project;
 use PDO;
 
 class db {
-	
+
 	public $db;
-	
+
 	public function __construct() {
 		$this->connect();
 	}
-	
+
 	public function connect() {
-		try {  
-			$this->db = new PDO ("mysql:host=localhost;dbname=life", "life","@p455w0rd1!"); 
+		try {
+			$this->db = new PDO ("mysql:host=localhost;dbname=life", "root",""); 
 			$this->db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch (PDOException $e) {
-			print( "Error connecting to SQL Server." );   
+			print( "Error connecting to SQL Server." );
 			die(print_r($e));
-		} 
+		}
 	}
-	
+
 	public function fetchResult($i) {
 		$output = array();
 		if ($data = $i->fetch(PDO::FETCH_ASSOC)) {
@@ -29,7 +29,7 @@ class db {
 		}
 		return $output;
 	}
-	
+
 	public function fetchRow($i) {
 		$output = array();
 		if ($data = $i->fetch(PDO::FETCH_ASSOC)) {
@@ -40,21 +40,21 @@ class db {
 		if(isset($output[0])) {
 		return $output[0];
 		} else {
-		return array();	
+		return array();
 		}
 	}
-	
+
 	public function getLast() {
 		$stmt = $this->db->prepare("SELECT LAST_INSERT_ID() AS 'last';");
 		$stmt->execute();
 		$result = $this->fetchRow($stmt);
 		return $result['last'];
 	}
-	
-	
+
+
 	public function __destruct() {
 		$this->db = NULL;
 	}
-		
+
 }
 ?>

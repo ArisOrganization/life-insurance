@@ -1,52 +1,58 @@
 $step-transition-speed: 500ms
 $step-progress-animation: pulse-animation 420ms forwards
-	
-section 
+
+section
 	&.hero-form-banner
-		position: relative 
+		.form-title
+			font-family: "Quicksand", sans-serif
+			color: #b20077
+			font-size: 48px
+			font-weight: bold
+
+		position: relative
 		background-color: white
 		// background-image: url('/assets/form-bg.jpg')
 		background-size: cover
 		background-position: top center
 		background-repeat: no-repeat
-		.hero-form-container  
-			margin: 80px auto 0   
-			.form-main-title-container 
+		.hero-form-container
+			margin: 80px auto 0
+			.form-main-title-container
 				border-top-right-radius: 4px
 				border-top-left-radius: 4px
-				padding: 30px 15px 
-				text-align: center 
+				padding: 30px 15px
+				text-align: center
 				margin-bottom: 3px
-				.step-progress 
+				.step-progress
 					width: 100%
-					> div 
+					> div
 						width: 100%
-						display: flex 
-						align-items: flex-start 
-						flex-direction: row 
+						display: flex
+						align-items: flex-start
+						flex-direction: row
 						justify-content: space-between
 						margin: 40px 0
-						.single-step 
-							width: 25% 
+						.single-step
+							width: 25%
 							flex-shrink: 0
 							position: relative
-							&:last-of-type 
+							&:last-of-type
 								&:after,
-								&:before 
+								&:before
 									content: ""
 									display: none
-								
+
 							&:after,
-							&:before 
+							&:before
 								content: ""
 								width: 100%
 								position: absolute
-								left: 50% 
-								height: 2px 
+								left: 50%
+								height: 2px
 								background-color: #f2f4f8
-								top: 29px 
+								top: 29px
 								transition: ease-in-out $step-transition-speed all
-							&:after 
+							&:after
 								width: 0
 								background: #b20077
 
@@ -56,29 +62,29 @@ section
 								transition: ease-in-out $step-transition-speed all
 
 							.inner-single-step
-								position: relative 
+								position: relative
 								z-index: 999
-								> p 
-									font-size: 20px 									
+								> p
+									font-size: 20px
 									color: #6c6c6c
 									margin-top: 7px
 									font-weight: 800
 
-								.step-number 
+								.step-number
 									margin: 0 auto
-									display: flex 
-									align-items: center 
-									justify-content: center 
+									display: flex
+									align-items: center
+									justify-content: center
 									border-radius: 50%
-									height: 60px 
-									width: 60px 
+									height: 60px
+									width: 60px
 									background-color: #f2f4f8
-									p 
-										color: grey 
+									p
+										color: grey
 										font-size: 34px
 							&.completed-step
 								.inner-single-step
-									.step-number 
+									.step-number
 										animation: $step-progress-animation
 										transition: ease-in-out $step-transition-speed all
 										background: #b20077
@@ -87,41 +93,41 @@ section
 										background: linear-gradient(45deg, #b20077 33%, #009cdd 100%)
 										p
 											color: white
-									
-									> p 
+
+									> p
 										color: #b20077
-								&.line-step 
-									&:after 
+								&.line-step
+									&:after
 										content: ""
-										width: 100% 
+										width: 100%
 										transition: ease-in-out $step-transition-speed all
 
 
 
 
 
-				h1 
+				h1
 					line-height: 1
 					font-style: italic
-					font-size: 35px 
-					font-family: $font-title 
+					font-size: 35px
+					font-family: $font-title
 					color: $color-primary
 					text-transform: capitalize
-					margin-bottom: 35px 
+					margin-bottom: 35px
 				> p
 					font-size: 18px
 					text-align: center
-					color: #666666 
-		form 
+					color: #666666
+		form
 			display: grid
 			align-items: flex-start
-			.form-step 
+			.form-step
 				grid-column: 1
 				grid-row: 1
 				opacity: 0
 				pointer-events: none
 				transition: ease-in-out 200ms all
-				background-color: white 
+				background-color: white
 
 				border-bottom-right-radius: 4px
 				border-bottom-left-radius: 4px
@@ -133,8 +139,8 @@ section
 					transition: ease-in-out 200ms all
 					pointer-events: all
 					// box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2)
-				.inner-form-step  
-					label.error 
+				.inner-form-step
+					label.error
 						font-size: 12px!important
 						color: red!important
 						text-transform: initial!important
@@ -142,19 +148,19 @@ section
 						transform: translateY(-13px)!important
 						text-align: right!important
 						letter-spacing: 0!important
-					.step-title-container  
+					.step-title-container
 						padding: 30px
 						background: white
-						> p  
+						> p
 							font-size: 40px
 							padding: 0
 							color: #333
 							text-align: center
-						// .step-title 
-						// 	font-size: 35px  
-						// 	margin-bottom: 20px 
-						// 	text-align: center   
-						// 	padding: 15px 
+						// .step-title
+						// 	font-size: 35px
+						// 	margin-bottom: 20px
+						// 	text-align: center
+						// 	padding: 15px
 						// .title-number
 						// 	display: flex
 						// 	> p
@@ -177,49 +183,49 @@ section
 						// 		margin-right: 25px
 
 						// > p:last-of-type
-							// font-size: 20px 
+							// font-size: 20px
 							// padding: 0 20px 0 110px
 							// color: grey
 							// text-align: left
-							// display: none 
-					.step-content  
-						font-size: 24px 
+							// display: none
+					.step-content
+						font-size: 24px
 						width: 100%
 						padding: 30px 15px
 						.row-fieldsets
 							display: flex
 							flex-wrap: wrap
 							justify-content: space-between
-							fieldset 
+							fieldset
 								width: calc(50% - 5px)
 
 						.cover-person-group
-							&.person-2  
+							&.person-2
 								&.not-applicable
 									display: none!important
 
-						fieldset 
-							border: none    
+						fieldset
+							border: none
 							width: 100%
 
-							label 
+							label
 								font-size: 12px
 								color: #bebebe
 								text-align: left
-								width: 100%  
+								width: 100%
 								text-transform: uppercase
 								font-weight: 600
 								letter-spacing: 1px
-								display: block 
+								display: block
 								margin-bottom: 5px
 							input,
-							select 
+							select
 								margin-bottom: 15px
-								display: block 
+								display: block
 								width: 100%
-								padding: 10px 
+								padding: 10px
 								background-color: white
-								border: 2px solid lightgrey 
+								border: 2px solid lightgrey
 								-webkit-appearance: none
 								appearance: none
 								font-size: 16px
@@ -228,57 +234,57 @@ section
 								flex-direction: row
 								justify-content: space-between
 								select
-    								width: 31% 
-						 
-						button 
-							padding: 15px 
-							width: 50% 
+    								width: 31%
+
+						button
+							padding: 15px
+							width: 50%
 							font-size: 20px
-							background-color: $color-primary 
-							color: white 
+							background-color: $color-primary
+							color: white
 							border: 2px solid $color-primary
 							transition: ease-in-out 200ms all
 							border-radius: 4px
 							&.form-next, &.form-submit
 								width: 100%
-							&:hover 
-								cursor: pointer 
+							&:hover
+								cursor: pointer
 								background-color: white
 								color: $color-primary
 								border: 2px solid $color-primary
- 
-						.quote-buttons  
-							display: flex 
+
+						.quote-buttons
+							display: flex
 							justify-content: space-between
-							button 
-								padding: 15px 
+							button
+								padding: 15px
 								width: calc(50% - 2px)
 								font-size: 20px
-								background-color: $color-primary 
-								color: white 
+								background-color: $color-primary
+								color: white
 								border: 2px solid $color-primary
 								transition: ease-in-out 200ms all
 								border-radius: 4px
-								&:hover 
-									cursor: pointer 
+								&:hover
+									cursor: pointer
 									background-color: white
 									color: $color-primary
 									border: 2px solid $color-primary
-					
+
 
 					.checkbox-container
-						display: flex 
+						display: flex
 						align-items: center
 						justify-content: flex-start
-						cursor: pointer 
+						cursor: pointer
 						margin-bottom: 15px
-						label 
+						label
 							font-size: 18px
 							color: #808080
 						.checkbox-clickable
 							position: relative
-							width: 40px 
-							height: 40px 
+							width: 40px
+							height: 40px
 							border-radius: 3px
 							margin-right: 15px
 							border: 2px solid #979797
@@ -298,20 +304,20 @@ section
 								transform: scale(0)
 								opacity: 0
 							&.custom-checked
-								&:before 
+								&:before
 									transition: ease-in-out 300ms all
 									transform: scale(1)
 									opacity: 1
 
 
-							input 
+							input
 								position: absolute
 								left: 0
 								opacity: 0
 
 
 
- 
+
 @keyframes pulse-animation
 	0%
 		transform: scale(1)
@@ -323,12 +329,3 @@ section
 		transform: scale(1.2)
 	100%
 		transform: scale(1)
-
-
-
-
-
-
-
-
-

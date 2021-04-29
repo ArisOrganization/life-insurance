@@ -314,6 +314,7 @@
 
           $(".form-submit").on("click", function (e) {
             e.preventDefault();
+            console.log('form submit');
 
             _this.form_data.email = $("#email").val();
             _this.form_data.telephone = $("#telephone").val();
