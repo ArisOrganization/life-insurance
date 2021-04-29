@@ -253,11 +253,11 @@
             $(".checkbox-clickable").on("click", function (e) {
               e.preventDefault();
 
-              if ($(".checkbox-clickable").hasClass("custom-checked")) {
-                $(".checkbox-clickable").removeClass("custom-checked");
+              if ($(this).hasClass("custom-checked")) {
+                $(this).removeClass("custom-checked");
                 _this.form_data.terms_agree = false;
               } else {
-                $(".checkbox-clickable").addClass("custom-checked");
+                $(this).addClass("custom-checked");
                 _this.form_data.terms_agree = true;
               }
             });

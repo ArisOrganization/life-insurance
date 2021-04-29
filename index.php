@@ -447,30 +447,14 @@
                                 href="/docs/life-privacy.pdf">Privacy Policy</a> and <a target="__blank"
                                 href="/docs/life-terms.pdf">terms and conditions</a>.</label>
                           </div>
-                        </div>
-                        <button type="button" data-toggle="modal" data-target="#consentModal">Get My Quote</button>
-
-                        <div class="modal fade" id="consentModal" tabindex="-1" role="dialog" aria-labelledby="consentModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="consentModalLabel">Opt-in</h5>
-                                <div type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </div>
-                              </div>
-                              <div class="modal-body">
-                                <p>
-                                  A protection specialist will need to contact you to discuss your policy options, do you consent to this call?
-                                </p>
-                              </div>
-                              <div class="modal-footer">
-                                <div type="button" class="btn btn-success btn-lg form-submit px-5" vale="Submit">Yes</div>
-                                <div type="button" class="btn btn-danger btn-lg px-5" data-dismiss="modal">No</div>
-                              </div>
+                          <div class="checkbox-container">
+                            <div class="checkbox-clickable">
+                              <input type="checkbox" name="call-check" id="call-check" />
                             </div>
+                            <label for="call-check">By clicking this box you agree to a protection specialist calling you to discuss your policy options.</label>
                           </div>
                         </div>
+                        <button type="button" data-toggle="modal" data-target="#consentModal">Get My Quote</button>
 
                       </div>
                     </div>
