@@ -107,6 +107,10 @@
       },
       general_js: {
         init: function init() {
+
+
+
+
           $(".single-range-item").on("click", function (e) {
             e.preventDefault();
 
@@ -146,7 +150,9 @@
 
           $(".clickable").on("click", function (e) {
             e.preventDefault();
-            window.location.href = "/comparison-quote";
+            // window.location.href = "/comparison-quote";
+            var quote = $('.hero-form-banner').offset().top;
+            $('html, body').animate({ scrollTop: quote }, 'slow');
           });
 
           // pedro new code
