@@ -58,8 +58,8 @@
     <section class='hero-form-banner'>
       <div class='container'>
         <div class='row'>
-          <div class='col-12 pt-5'>
-            <h1 class="form-title text-center py-5">Get your quote in 4 easy steps</h1>
+          <div class='col-12 pt-lg-5'>
+            <h1 class="form-title text-center py-lg-5">Get your quote in 4 easy steps</h1>
             <div class="hero-form-container mt-0">
               <div class="inner-hero-form-container">
                 <div class="form-main-title-container">
