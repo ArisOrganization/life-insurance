@@ -35,10 +35,10 @@ if ($contentType === "application/json") {
 switch($method){
 
 
-    case "submit_form": 
-        session_start();  
-        $result_arr = array("success" => false); 
- 
+    case "submit_form":
+        session_start();
+        $result_arr = array("success" => false);
+
         $logic = new logic();
         // echo "<pre>";
         // print_r($data);
@@ -48,19 +48,19 @@ switch($method){
 
         $send = $logic->send_mail($data, "lead");
         $send_thanks = $logic->send_mail($data, "thanks");
-        
-        if($send["success"]){ 
-            $result_arr["success"] = true; 
+
+        if($send["success"]){
+            $result_arr["success"] = true;
             $result_arr["waypoint_result"] = $waypoint_result;
             $_SESSION["enquiry_id"] = "true";
             $_SESSION["name"] = $data->name_1;
 
         }else{
-            $result_arr["error"] = $send["message"]; 
-        } 
- 
+            $result_arr["error"] = $send["message"];
+        }
+
         echo json_encode($result_arr);
-        break; 
+        break;
 
     default:
         echo "METHOD NOT FOUND...";

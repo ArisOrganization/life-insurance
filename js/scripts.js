@@ -255,10 +255,10 @@
 
               if ($(this).hasClass("custom-checked")) {
                 $(this).removeClass("custom-checked");
-                _this.form_data.terms_agree = false;
+                _this.form_data.terms_agree = 'No';
               } else {
                 $(this).addClass("custom-checked");
-                _this.form_data.terms_agree = true;
+                _this.form_data.terms_agree = 'Yes';
               }
             });
           }
@@ -266,7 +266,7 @@
           $(".quote-buttons button").on("click", function (e) {
             e.preventDefault();
             _this.form_data.cover_group = $(this).attr("data-coverfor");
-            if (_this.form_data.cover_group == "me") {
+            if (_this.form_data.cover_group == "single") {
               $(".person-2").addClass("not-applicable");
               _this.form_data.dob_2 = "na";
               _this.form_data.name_2 = "na";
@@ -281,10 +281,8 @@
               _this.animate_step();
 
               if ($(".active-step").hasClass("step-2")) {
-                _this.form_data.cover_value = $(
-                  ".active-step select option:selected"
-                ).val();
-                _this.form_data.cover_length = $("#cover-length").val();
+                _this.form_data.cover_value = $("#cover-value option:selected").val();
+                _this.form_data.cover_length = $("#cover-length option:selected").val();
               } else if ($(".active-step").hasClass("step-3")) {
                 _this.form_data.name_1 = $("#name-1").val();
                 _this.form_data.dob_1 =
@@ -295,7 +293,7 @@
                   $("#date-year-1 option:selected").val();
 
                 console.log("dob " + _this.form_data.dob_1);
-                if (_this.form_data.cover_group != "me") {
+                if (_this.form_data.cover_group != "single") {
                   _this.form_data.name_2 = $("#name-2").val();
                   _this.form_data.dob_2 =
                     $("#date-day-2 option:selected").val() +
@@ -341,7 +339,7 @@
             )
               return false;
           } else if ($(".active-step").hasClass("step-3")) {
-            if (_this.form_data.cover_group == "me") {
+            if (_this.form_data.cover_group == "single") {
               if (
                 $("#name-1").val().length < 1 ||
                 $("#date-day-1 option:selected").val() == "empty" ||
@@ -367,7 +365,8 @@
           } else if ($(".active-step").hasClass("step-4")) {
             console.log("step 4");
 
-            if (_this.form_data.terms_agree) {
+            if (_this.form_data.terms_agree == 'Yes') {
+              console.log('terms checked');
               if (
                 !$("#telephone").hasClass("valid") ||
                 !$("#email").hasClass("valid")

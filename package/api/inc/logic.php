@@ -166,6 +166,9 @@ class logic {
             $sendToEmail = 'grant@here4life.co.uk';
             $ccEmail =  'scott@claims2gain.com';
 
+            // $sendToEmail = 'tom@opopmedia.co.uk';
+            // $ccEmail =  'james@opopmedia.com';
+
             // $sendToEmail = 'jay.exton@live.co.uk';
             // $ccEmail_a =  'james@opopmedia.co.uk';
             // $ccEmail_b =  'info@opopmedia.co.uk';

@@ -118,8 +118,8 @@
                         <fieldset>
                           <label>I'd like a quote for:</label>
                           <div class="quote-buttons">
-                            <button data-coverfor="me">Just Me</button>
-                            <button data-coverfor="couple">My Partner and I</button>
+                            <button data-coverfor="single">Just Me</button>
+                            <button data-coverfor="joint">My Partner and I</button>
                           </div>
                         </fieldset>
                       </div>
@@ -134,27 +134,29 @@
                         <div class="row-fieldsets">
                           <fieldset>
                             <label>HOW MUCH COVER WOULD YOU LIKE?</label>
-                            <select class="cover-length">
+                            <select id="cover-value" class="cover-value">
                               <option value="empty">Please Select</option>
                               <option value="0-50">Under 50k</option>
                               <option value="50-100">50k - 100k</option>
-                              <option value="income">100k - 150k</option>
-                              <option value="mortgage">150k - 200k</option>
-                              <option value="criticalillness">250k -300k</option>
-                              <option value="privatemedical">300k - 400k</option>
-                              <option value="privatemedical">400k - 500k</option>
-                              <option value="privatemedical">500k - 1m</option>
-                              <option value="privatemedical">1m+</option>
-                              <option value="privatemedical">I'm not sure</option>
+                              <option value="100-150">100k - 150k</option>
+                              <option value="150-200">150k - 200k</option>
+                              <option value="250-300">250k -300k</option>
+                              <option value="300-400">300k - 400k</option>
+                              <option value="400-500">400k - 500k</option>
+                              <option value="500-1m">500k - 1m</option>
+                              <option value="1m+">1m+</option>
+                              <option value="not sure">I'm not sure</option>
                             </select>
                           </fieldset>
                           <fieldset>
                             <label>COVER LENGTH? (YEARS)*</label>
 
-                            <select name="cover-length">
+                            <select id="cover-length" name="cover-length">
                               <option value="empty">Please select</option>
                               <?php for ($i=1; $i < 51; $i++) { ?>
-                                <option value="<?= $i ?>"><?= $i ?> Years</option>
+                                <option value="<?= $i ?> Year Term">
+                                  <?= $i ?> Years
+                                </option>
                               <?php } ?>
                               <option value="life">Whole of Life</option>
                             </select>
