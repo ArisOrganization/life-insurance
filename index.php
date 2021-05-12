@@ -44,9 +44,7 @@
                       <li> Access to over 100 discount partners</li>
                     </ul>
                     <button class="clickable">GET MY QUOTE</button>
-                    <p class="small text-center text-muted">
-                      * Premium driven quotation based on a 30 year old male, none smoker level term cover, £7 per month over 25 years would get £125,000
-                    </p>
+                    
 
                   </div>
                 </div>
