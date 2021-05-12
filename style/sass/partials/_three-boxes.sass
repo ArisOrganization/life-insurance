@@ -1,6 +1,15 @@
 #three-boxes
   background: #eee
-  padding: 60px 0 110px 0
+
+  a
+    color: $color-primary
+    text-decoration: underline
+    font-size: 1.4rem
+
+    &:hover
+      color: darken($color-primary, 10%)
+      transform: scale(1.1)
+
   button
     margin: 0 auto
     display: block
@@ -21,8 +30,30 @@
       min-width: 350px
       border-radius: 10px
 
+    .box:nth-child(1)
       p:first-of-type
         font-size: 24px
         font-weight: 600
         margin-bottom: 20px
-        color: $color-primary
+        color: #F6572B
+
+    .box:nth-child(2)
+      p:first-of-type
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 20px
+        color: #AC0069
+
+    .box:nth-child(3)
+      p:first-of-type
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 20px
+        color: #FFDE3D
+
+    .box:nth-child(4)
+      p:first-of-type
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 20px
+        color: #009DD4

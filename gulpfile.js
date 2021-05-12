@@ -54,7 +54,7 @@ function js(done) {
         'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
         // 'node_modules/jquery-ui-dist/jquery-ui.min.js',
         // 'node_modules/moment/min/moment.min.js',
-        // 'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
         "node_modules/rellax/rellax.min.js",
         './js/*/*.js',
         './js/*.js'
@@ -92,7 +92,7 @@ function css(done) {
             "node_modules/bootstrap/dist/css/bootstrap-grid.css",
             "node_modules/jquery-ui-dist/jquery-ui.min.css",
             'node_modules/aos/dist/aos.css',
-            // "node_modules/slick-carousel/slick/slick.css",
+            "node_modules/slick-carousel/slick/slick.css",
             "./style/sass/style.sass"
         ])
         .pipe(

@@ -3,6 +3,9 @@ namespace project;
 
 use Mailgun\Mailgun;
 
+use Google_Service_Sheets;
+use Google_Client;
+use Google_Service_Sheets_ValueRange;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
