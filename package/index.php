@@ -34,16 +34,19 @@
                 <div class="inner-left-content">
                   <div class="title-container">
                     <h1>Life Insurance</h1>
-                    <p class="hero-tagline">Why choose Here 4 Life</p>
+                    <p class="hero-tagline">From just £5* per month</p>
                   </div>
                   <div class="content-container">
                     <ul>
-                      <li> We offer a wide range of insurers to choose from</li>
-                      <li> Our highly trained advisers can tailor make the policy to your needs</li>
-                      <li> We offer additional benefits not provided by the insurers directly</li>
-                      <li> UK Call Centre</li>
+                      <li> Cover from just £5 per month</li>
+                      <li> Compare the UKs top insurers</li>
+                      <li> Protect the ones you love</li>
+                      <li> Access to over 100 discount partners</li>
                     </ul>
                     <button class="clickable">GET MY QUOTE</button>
+                    <p class="small text-center text-muted">
+                      * Premium driven quotation based on a 30 year old male, none smoker level term cover, £7 per month over 25 years would get £125,000
+                    </p>
 
                   </div>
                 </div>
@@ -54,12 +57,53 @@
         </div>
       </section>
 
+      <!-- Insurer Carousel -->
+      <section id="insurers-carousel" class="bg-white py-5 d-flex align-items-center">
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/aviva.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/aig.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/metlife.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/royal-london.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/lv.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/exeter.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/legal-general.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/national-friendly.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/vitality.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/onefamily.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/aegon.svg" />
+        </div>
+        <div>
+          <img class="img-fluid" src="assets/insurers/svg/zurich.svg" />
+        </div>
+      </section>
+
+
     <!-- New Form -->
-    <section class='hero-form-banner'>
+    <section class='hero-form-banner pb-5'>
       <div class='container'>
         <div class='row'>
-          <div class='col-12 pt-lg-5'>
-            <h1 class="form-title text-center py-lg-5">Get your quote in 4 easy steps</h1>
+          <div class='col-12'>
+            <h1 class="form-title text-center">Get your quote in 4 easy steps</h1>
             <div class="hero-form-container mt-0">
               <div class="inner-hero-form-container">
                 <div class="form-main-title-container">
@@ -103,7 +147,7 @@
                       </div>
                     </div>
                   </div>
-                  <p>
+                  <p class="pt-3">
                     Complete each step to get a no obligation life insurance quote, <br />
                     compared against hundreds of insurers, giving you peace of mind.
                   </p>
@@ -116,7 +160,7 @@
                       </div>
                       <div class="step-content">
                         <fieldset>
-                          <label>I'd like a quote for:</label>
+                          <p class="small pb-3">I'd like a quote for:</p>
                           <div class="quote-buttons">
                             <button data-coverfor="single">Just Me</button>
                             <button data-coverfor="joint">My Partner and I</button>
@@ -472,21 +516,51 @@
 
       <section id='three-boxes'>
         <div class="inner_container">
+
           <div class="box">
-            <p>Why life insurance?</p>
-            <p>Life insurance helps keep life going. Protecting your loved ones' financial future.
-            It can pay off debts, cover college costs or even pay the mortgage. Life insurance even
-            offers options that can help while you are living.</p>
+            <img class="img-fluid mx-auto" src="assets/icons/heart-insurance.svg" />
+            <p class="text-center pt-3">Life Insurance</p>
+            <p class="text-justify">
+              Life insurance policies can ensure your family or friends are not financially burdened when you die, and the good news is, the younger you are, the cheaper the policy is likely to be.
+            </p>
           </div>
+
           <div class="box">
-            <p>What are my choices?</p>
-            <p>There are a variety of flexible options available to meet your needs now and for the future.
-            Consult with a financial profesional to learn more about various types of policies.</p>
+            <img class="img-fluid mx-auto" src="assets/icons/heart-protection.svg" />
+            <p class="text-center pt-3">Income Protection</p>
+            <p class="text-justify">
+              Being unable to pay your mortgage or meet your financial commitments in the event of redundancy, accident or illness is a significant fear for many people, particularly in the current uncertain economic climate.
+            </p>
           </div>
+
+          <div class="box">
+            <img class="img-fluid mx-auto" src="assets/icons/heart-illness.svg" />
+            <p class="text-center pt-3">Critical Illness</p>
+            <p class="text-justify">
+              Critical illness cover is important for every stage of your, and your family's life, offering vital cover should a range of serious illnesses suddenly strike.
+            </p>
+          </div>
+
+          <div class="box">
+            <img class="img-fluid mx-auto" src="assets/icons/heart-protection-2.svg" />
+            <p class="text-center pt-3">Income Protection</p>
+            <p class="text-justify">
+              Whether you’ve just got your feet on the housing ladder or are firmly ensconced in your family home, your property is likely to be your single most valuable asset.
+            </p>
+          </div>
+
         </div>
         <button class='cta clickable'>GET YOUR FREE QUOTE TODAY</button>
+        <div class="d-flex justify-content-center mt-5">
+          <a id="faq-link" href="#" class="text-center text-uppercase font-weight-bold py-3">View all FAQ's</a>
+        </div>
 
       </section>
+
+
+
+
+
       <section class='three-steps'>
         <div class='container'>
           <div class='row'>
@@ -519,7 +593,7 @@
                 <div class="step-number">
                   <span>3</span>
                 </div>
-                <p>Secure the guaranteed price you’ll pay.</p>
+                <p>Secure the guaranteed price you’ll pay. Cheaper than going directly to the insurer!</p>
               </div>
             </div>
 

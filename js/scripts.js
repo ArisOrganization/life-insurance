@@ -108,7 +108,35 @@
       general_js: {
         init: function init() {
 
-
+          // Insurer Slider
+          $('#insurers-carousel').slick({
+            mobileFirst: true,
+            infinite: true,
+            dots: false,
+            prevArrow: false,
+            nextArrow: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            speed: 5000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 6,
+                infinite: true,
+                speed: 7500
+              }
+            }, {
+              breakpoint: 1400,
+              settings: {
+                slidesToShow: 8,
+                infinite: true,
+                speed: 10000
+              }
+            }]
+          });
 
 
           $(".single-range-item").on("click", function (e) {
@@ -141,6 +169,12 @@
           // 		}
           // 	);
           // }
+
+          $('#faq-link').on('click', function (e) {
+            e.preventDefault();
+            var faq = $('.life-range').offset().top;
+            $('html, body').animate({ scrollTop: faq }, 'slow');
+          });
 
           $(".scroll-clickable").on("click", function (e) {
             e.preventDefault();
