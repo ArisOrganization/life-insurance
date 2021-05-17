@@ -44,7 +44,7 @@
                       <li> Access to over 100 discount partners</li>
                     </ul>
                     <button class="clickable">GET MY QUOTE</button>
-                    
+
 
                   </div>
                 </div>
@@ -541,7 +541,7 @@
 
           <div class="box">
             <img class="img-fluid mx-auto" src="assets/icons/heart-protection-2.svg" />
-            <p class="text-center pt-3">Income Protection</p>
+            <p class="text-center pt-3">Mortgage Protection</p>
             <p class="text-justify">
               Whether you’ve just got your feet on the housing ladder or are firmly ensconced in your family home, your property is likely to be your single most valuable asset.
             </p>
